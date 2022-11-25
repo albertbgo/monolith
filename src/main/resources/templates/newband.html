@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Employee Management System</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+  <h1>Employee Management System</h1>
+  <hr>
+  <h2>¡Save a New Band!</h2>
+
+  <form action="#" th:action="@{/bands/save}" th:object="${band}"
+        method="POST">
+    <div class="form-group">
+      <label for="bandName">Band Name</label>
+      <input type="text" th:field="*{nameBand}"  class="form-control" id="bandName" aria-describedby="emailHelp" placeholder="Enter Band Name or an A.K.A">
+    </div>
+    <div class="form-group">
+      <label for="bandGenre">Band's Genre</label>
+      <input type="text" th:field="*{genreBand}"  class="form-control" id="bandGenre" placeholder="Genre...">
+    </div>
+    <div class="form-group">
+      <label for="bandYear">Year Release Band</label>
+      <input type="date" data-date-format="dd-mm-yyyy" th:field="*{yearReleaseBand}" class="form-control" id="bandYear">
+    </div>
+    <div class="form-group">
+      <label for="bandDescription">Band Description</label>
+      <input type="text" th:field="*{descriptionBand}" class="form-control" id="bandDescription">
+    </div>
+    <div class="form-group">
+      <label for="bandLogoUrl">Logo Image URL</label>
+      <input type="text" th:field="*{logoBand}"  class="form-control" id="bandLogoUrl" placeholder="https://your-logo.png">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <hr>
+
+
+  <button type="button" class="btn btn-default" aria-label="Left Align">
+    <span class="glyphicon glyphicon-align-left" aria-hidden="true"><a th:href="@{/bands/}"> Band Inventory</a></span>
+  </button>
+</div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
