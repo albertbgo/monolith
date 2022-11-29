@@ -20,7 +20,7 @@ sudo chmod -R 777 /opt/tomcat/
 
 mkdir ~/temp/
 sudo apt-get install git -y
-git clone https://github.com/albertbgo/monolith.git ~/temp/
+git clone https://github.com/albertbgo/monolith.git ~/temp/monolith
 cd ~/temp/monolith
 
 ./mvnw clean install -Dmaven.test.skip=true
